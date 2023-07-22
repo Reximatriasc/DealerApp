@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.SecondFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/NamaDealerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Nama Dealer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/NamaDealerEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/NamaDealerTextView"
+            app:layout_constraintTop_toBottomOf="@+id/NamaDealerTextView" />
+
+        <TextView
+            android:id="@+id/AlamatTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Alamat"
+            app:layout_constraintEnd_toEndOf="@+id/NamaDealerEditText"
+            app:layout_constraintHorizontal_bias="0.157"
+            app:layout_constraintStart_toStartOf="@+id/NamaDealerEditText"
+            app:layout_constraintTop_toBottomOf="@+id/NamaDealerEditText" />
+
+        <EditText
+            android:id="@+id/AlamatEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/AlamatTextView"
+            app:layout_constraintStart_toStartOf="@+id/AlamatTextView"
+            app:layout_constraintTop_toBottomOf="@+id/AlamatTextView" />
+
+        <TextView
+            android:id="@+id/TelpTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Telp"
+            app:layout_constraintEnd_toEndOf="@+id/AlamatEditText"
+            app:layout_constraintStart_toStartOf="@+id/AlamatEditText"
+            app:layout_constraintTop_toBottomOf="@+id/AlamatEditText" />
+
+        <EditText
+            android:id="@+id/TelpEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@+id/TelpTextView"
+            app:layout_constraintStart_toStartOf="@+id/TelpTextView"
+            app:layout_constraintTop_toBottomOf="@+id/TelpTextView" />
+
+        <fragment
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="16dp"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            app:layout_constraintEnd_toEndOf="@+id/TelpTextView"
+            app:layout_constraintStart_toStartOf="@+id/TelpTextView"
+            app:layout_constraintTop_toBottomOf="@+id/TelpTextView" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/TelpEditText"
+            app:layout_constraintTop_toBottomOf="@+id/TelpEditText">
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                android:visibility="gone"
+                android:text="Delete" />
+
+            <Button
+                android:id="@+id/saveButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:text="@string/save"/>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
